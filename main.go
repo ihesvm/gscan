@@ -48,7 +48,7 @@ func PrettyPrint(v interface{}) (err error) {
 	if err == nil {
 		fmt.Println(string(b))
 	}
-	name := "Object-" + strconv.Itoa(rand.Intn(100))
+	name := "Object-" + strconv.Itoa(rand.Intn(100)) + ".json"
 	_ = os.WriteFile(name, b, 0644)
 	return
 }
